@@ -13,7 +13,7 @@ def register(request):
             user = form.save()
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
-            Login.objects.create(User_Id=user, username=username, password=password)
+            Login.objects.create(User_Id=user, username=username, password=password,status=0)
             return redirect('login')  # Replace 'login' with your login URL name
     else:
         form = UserRegistrationForm()

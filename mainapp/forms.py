@@ -6,6 +6,7 @@ from .models import User,Login,City
 class UserRegistrationForm(forms.ModelForm):
     username = forms.CharField(max_length=20)
     password = forms.CharField(widget=forms.PasswordInput)
+    
 
     class Meta:
         model = User

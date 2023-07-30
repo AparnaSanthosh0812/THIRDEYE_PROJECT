@@ -28,6 +28,7 @@ class Login(models.Model):
     User_Id = models.OneToOneField(User, primary_key=True, on_delete=models.CASCADE,db_column='User_Id')
     username = models.CharField(max_length=150, unique=True)
     password = models.CharField(max_length=128)
+    status = models.IntegerField()
 
 
     
