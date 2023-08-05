@@ -24,7 +24,7 @@ def home(request):
 
 def sellerlogin(request):
     if request.method == 'POST':
-        logger = logging.getLogger('mainapp')
+        logger = logging.getLogger('seller')
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(request, username=username, password=password)
