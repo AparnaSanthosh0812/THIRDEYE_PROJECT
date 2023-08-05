@@ -57,7 +57,10 @@ ROOT_URLCONF = 'ThirdEye.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'mainapp', 'templates'),
+            os.path.join(BASE_DIR, 'seller', 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,12 +93,23 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': 'C:/Users/Owner/Project/ThirdEye/logfile.log',  # Specify the path to the log file
+            'filename': 'C:/Users/Owner/Myproj/log/mainapp.log',  # Specify the path to the log file
         },
+        'file1': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'C:/Users/Owner/Myproj/log/seller.log',  # Specify the path to the log file
+        },    
     },
     'loggers': {
         'mainapp': {
             'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        
+        'seller': {
+            'handlers': ['file1'],
             'level': 'DEBUG',
             'propagate': False,
         },
@@ -153,6 +167,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+
 
 
 # Default primary key field type

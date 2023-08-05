@@ -13,13 +13,15 @@ def register(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            return redirect('login')  # Replace 'login' with your login URL name
+            return redirect('login.html')  # Replace 'login' with your login URL name
     else:
         form = UserRegistrationForm()
     return render(request, 'registration.html', {'form': form})
   
 # views.py
 
+def home(request):
+    return render(request,'Index.html')
 
 def login(request):
     if request.method == 'POST':
@@ -30,9 +32,24 @@ def login(request):
         logger.debug(f'Attempting login for user: {username}')
         if user is not None:
             logger.info(f'User {username} successfully authenticated.')
-            return redirect('Home.html')  # Redirect to the homepage after successful login
+            return redirect('Index.html')  # Redirect to the homepage after successful login
         else:
             logger.warning(f'Failed login attempt for user: {username}')
             return render(request, 'login.html', {'error_message': 'Invalid credentials'})
     return render(request, 'login.html')
+
+def sellerlogin(request):
+    if request.method == 'POST':
+        logger = logging.getLogger('mainapp')
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(request, username=username, password=password)
+        logger.debug(f'Attempting login for user: {username}')
+        if user is not None:
+            logger.info(f'User {username} successfully authenticated.')
+            return redirect('Index.html')  # Redirect to the homepage after successful login
+        else:
+            logger.warning(f'Failed login attempt for user: {username}')
+            return render(request, 'sellerlogin.html', {'error_message': 'Invalid credentials'})
+    return render(request, 'sellerlogin.html')
 
