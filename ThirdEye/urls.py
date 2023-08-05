@@ -30,7 +30,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('', include('seller.urls')), 
+    path('', include('seller.urls')), 
     path('', include('mainapp.urls')), 
     #path('login', include('mainapp.urls')) # Replace 'myapp' with your app's name
 ]
