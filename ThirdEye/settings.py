@@ -83,13 +83,33 @@ DATABASES = {
     }
 }
 '''
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'C:/Users/Owner/Project/ThirdEye/logfile.log',  # Specify the path to the log file
+        },
+    },
+    'loggers': {
+        'mainapp': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}
+
+
 # myproject/settings.py
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'thirdeye',
         'USER': 'root',
-        'PASSWORD': 'Aparna@123',
+        'PASSWORD': 'S9#sbw@7012676597',
         'HOST': 'localhost',
         'PORT': '',
     }
