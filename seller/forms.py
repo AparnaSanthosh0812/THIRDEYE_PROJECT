@@ -1,7 +1,7 @@
 
 # seller/forms.py
 from django import forms
-from .models import seller,Login,City, addproduct, Category
+from .models import seller,City, addproduct, Category
 
 class SellerRegistrationForm(forms.ModelForm):
     username = forms.CharField(max_length=20)
