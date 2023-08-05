@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mainapp'
+    'mainapp',
+    'seller',
   ]
 
 MIDDLEWARE = [
@@ -88,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'thirdeye',
         'USER': 'root',
-        'PASSWORD': 'S9#sbw@7012676597',
+        'PASSWORD': 'Aparna@123',
         'HOST': 'localhost',
         'PORT': '',
     }

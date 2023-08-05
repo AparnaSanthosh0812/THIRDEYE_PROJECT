@@ -1,0 +1,106 @@
+<!-- myapp/templates/registration/register.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thirdeye| Seller SignUp</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'mainapp/styles.css' %}">
+
+    <style>
+        /* static/mainapp/styles.css */
+
+/* Style the form elements */
+form {
+    margin: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  .registerbtn:hover {
+    opacity: 1;
+  }
+
+  a {
+    color: dodgerblue;
+  }
+  
+  input:focus, select:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+  }
+
+  .form-center {
+    width: 50%;
+    background-color: whitesmoke;
+   
+    border-radius: 10px;
+    margin: auto;
+  }
+  
+  /* Add more CSS rules as needed for styling */
+  
+    </style>
+</head>
+<body>
+    <center><h2>SELLER REGISTRATION</h2></center>
+    <div class="form-center">
+    
+    <form method="post" class="form-center">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="registerbtn">Register</button>
+        <div class="container signin">
+           
+            <p>Already have an account? <a href="registration.html">Sign in</a>.</p>
+            
+        </div>
+    </form>
+</div>
+</body>
+</html>
