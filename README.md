@@ -1,5 +1,6 @@
-# E-commerceWebsite
-This project deals with developing a Virtual website ‘E-commerce Website’. It provides the user with a list of the various products available for purchase in the store. For the convenience of online shopping, a shopping cart is provided to the user. After the selection of the goods, it is sent for the order confirmation process. The system is implemented using Python's web framework Django.
+# ThirdEye
+ThirdEye is an e-commerce application that allows user to purchase various types of products like clothes, decors, watches, bags etc.
+The application will include features for user authentication, product catalog management, shopping cart, checkout, order processing, payment gateway integration and user profiles. Application also creates an app log which tracks user activities.
 
 1. Clone this repository into a folder on your computer
 2. Download Python
