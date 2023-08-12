@@ -6,7 +6,11 @@ import sys
 
 def main():
     """Run administrative tasks."""
+<<<<<<< HEAD
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Eshop.settings')
+=======
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ThirdEye.settings')
+>>>>>>> origin/Aswani
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
