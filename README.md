@@ -9,4 +9,4 @@ The application will include features for user authentication, product catalog m
 5. Type python manage.py runserver to start a localhost server for the app.
 6. The API is started and now you can use the API routes to give requests.
 
-Hosting Link : thirdeye.pythonanywhere.com
+Hosting Link : http://thirdeye.pythonanywhere.com
